@@ -1,6 +1,9 @@
 <?php
 
+require_once _PS_MODULE_DIR_."customercomment/models/CommentModel.php";
+
 class customercomment extends Module {
+
     public function  __construct()
     {
         $this->name = 'customercomment';
@@ -16,7 +19,8 @@ class customercomment extends Module {
     public function install()
     {
         return parent::install()
-            && $this->registerHook('displayCustomerAccount');
+            && $this->registerHook('displayCustomerAccount')
+            && $this->createTable();
     }
 
     //
@@ -25,4 +29,12 @@ class customercomment extends Module {
         return $this->display(__FILE__, 'customer_comment.tpl');
     }
 
+    public function createTable() {
+        $db = Db::getInstance();
+
+        $db->execute("DROP TABLE IF EXISTS "._DB_PREFIX_."comments;");
+        
+        return $db->execute("CREATE TABLE "._DB_PREFIX_."comments(id_comment INT AUTO_INCREMENT PRIMARY KEY, comment TEXT,
+        date_add DATE, id_customer INT, rate INT);");
+    }
 }
