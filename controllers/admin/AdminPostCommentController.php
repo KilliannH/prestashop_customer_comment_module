@@ -7,5 +7,5 @@
  */
 
 class AdminPostCommentController extends ModuleAdminController {
-
+    /*displayBackOfficeTop*/
 }

@@ -21,6 +21,8 @@ class customercommentnewcommentModuleFrontController extends ModuleFrontControll
             $commentModel->save();
         }
 
+        $this->context->controller->addCSS(_PS_MODULE_DIR_."customercomment/views/css/newcomment.css");
+        $this->context->controller->addJS(_PS_MODULE_DIR_."customercomment/views/js/newcomment.js");
         $this->setTemplate('module:customercomment/views/templates/front/newcomment.tpl');
         parent::initContent();
     }

@@ -23,11 +23,20 @@ class customercomment extends Module {
             && $this->createTable();
     }
 
-    //
     public function hookDisplayCustomerAccount($params) {
 
         return $this->display(__FILE__, 'customer_comment.tpl');
     }
+
+    public $tabs = array(
+            array(
+                'name' => array(
+                    'en' => 'Customer comment', // Default value should be first
+                    'fr' => 'Commentaire client',
+        ),
+        'class_name' => 'AdminCustomers',
+        'parent_class_name' => 'ShopParameters',
+    ));
 
     public function createTable() {
         $db = Db::getInstance();
