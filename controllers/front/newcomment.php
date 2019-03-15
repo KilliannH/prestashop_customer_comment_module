@@ -7,7 +7,7 @@
  * Time: 11:17
  */
 
-class customercommentnewcommentModuleFrontController extends ModuleFrontController {
+class customercommentsnewcommentModuleFrontController extends ModuleFrontController {
 
     public function initContent() {
 
@@ -22,9 +22,9 @@ class customercommentnewcommentModuleFrontController extends ModuleFrontControll
             $commentModel->save();
         }
 
-        $this->context->controller->addCSS(_PS_MODULE_DIR_."customercomment/views/css/newcomment.css");
-        $this->context->controller->addJS(_PS_MODULE_DIR_."customercomment/views/js/newcomment.js");
-        $this->setTemplate('module:customercomment/views/templates/front/newcomment.tpl');
+        $this->context->controller->addCSS(_PS_MODULE_DIR_."customercomments/views/css/newcomment.css");
+        $this->context->controller->addJS(_PS_MODULE_DIR_."customercomments/views/js/newcomment.js");
+        $this->setTemplate('module:customercomments/views/templates/front/newcomment.tpl');
         parent::initContent();
     }
 }

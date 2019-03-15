@@ -1,21 +1,20 @@
 <?php
 
-require_once _PS_MODULE_DIR_."customercomment/models/CommentModel.php";
+require_once _PS_MODULE_DIR_."customercomments/models/CommentModel.php";
 
-class customercomment extends Module {
+class customercomments extends Module {
 
     public function  __construct()
     {
-        $this->name = 'customercomment';
+        $this->name = 'customercomments';
         $this->author = 'IMIE';
-        $this->displayName = $this->l('Customer comment');
-        $this->description = $this->l('This module allows users to post comment about our shop.');
+        $this->displayName = $this->l('Customer comments');
+        $this->description = $this->l('This module allows users to post comments about your shop.');
         $this->version = '1.0.0';
 
         parent::__construct();
     }
 
-    //on met le hook dans l'installateur car tous les hooks n'y sont pas forcément
     public function install()
     {
         return parent::install()
@@ -25,14 +24,14 @@ class customercomment extends Module {
 
     public function hookDisplayCustomerAccount($params) {
 
-        return $this->display(__FILE__, 'customer_comment.tpl');
+        return $this->display(__FILE__, 'customercomments.tpl');
     }
 
     public $tabs = array(
             array(
                 'name' => array(
-                    'en' => 'Customer comment', // Default value should be first
-                    'fr' => 'Commentaire client',
+                    'en' => 'Customer comments', // Default value should be first
+                    'fr' => 'Commentaires client',
         ),
         'class_name' => 'AdminPostComment',
         'parent_class_name' => 'AdminParentCustomer',
