@@ -14,6 +14,7 @@ class customercommentnewcommentModuleFrontController extends ModuleFrontControll
         if(Tools::isSubmit('comment_submit')) {
             $commentModel = new CommentModel;
             $commentModel->comment = Tools::getValue('comment_input');
+            $commentModel->rate = Tools::getValue('rate_input');
             //var_dump($commentModel);
             $customerId = $this->context->customer->id;
             $commentModel->id_customer = $customerId;

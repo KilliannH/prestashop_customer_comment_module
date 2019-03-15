@@ -34,6 +34,9 @@
         <label for="comment_input">
             <input id="comment_input" name="comment_input" style="padding-bottom: 10px;" class="form-control" placeholder="{l s='Your comment' mod='customercomment'}">
         </label>
+        <label for="rate_input">
+            <input id="rate_input" name="rate_input" hidden value="0">
+        </label>
         <input style="margin-bottom: 2px; padding-bottom: 10px;" name="comment_submit" class="btn btn-primary" type="submit" value="{l s='SEND' mod='customercomment'}">
     </form>
 {/block}

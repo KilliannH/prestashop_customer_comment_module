@@ -1,11 +1,14 @@
 #rate_comment {
-    padding-bottom: 20px;
+    padding-top: 10px;
 }
-
 .rate-items {
     cursor: default;
 }
 
 .rate-items :hover {
     cursor: pointer;
+}
+
+.rates-highlight {
+    color: #2fb5d2;
 }
