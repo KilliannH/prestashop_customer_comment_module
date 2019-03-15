@@ -24,6 +24,7 @@ class AdminPostCommentController extends ModuleAdminController {
         $this->_defaultOrderBy = 'date_add';
         $this->_defaultOrderWay = 'ASC';
 
+        // par default prestashop fait un SELECT * FROM _TABLE_PREFIX_comments;
         $this->_join = "INNER JOIN ps_customer ON a.id_customer = ps_customer.id_customer;";
         $this->_select = "ps_customer.firstname, ps_customer.lastname";
 
