@@ -6,7 +6,6 @@
 
 {block name='page_content'}
     <div id="rate_comment">
-
         <p>
         <!-- 1 -->
         <span class="rate-items" id="rate1">
@@ -37,6 +36,6 @@
         <label for="rate_input">
             <input id="rate_input" name="rate_input" hidden value="0">
         </label>
-        <input style="margin-bottom: 2px; padding-bottom: 10px;" name="comment_submit" class="btn btn-primary" type="submit" value="{l s='SEND' mod='customercomments'}">
+        <input style="margin-bottom: 2px; padding-bottom: 10px;" id="comment_submit" name="comment_submit" class="btn btn-primary" type="submit" value="{l s='SEND' mod='customercomments'}">
     </form>
 {/block}

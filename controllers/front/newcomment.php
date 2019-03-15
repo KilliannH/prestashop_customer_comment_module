@@ -15,11 +15,13 @@ class customercommentsnewcommentModuleFrontController extends ModuleFrontControl
             $commentModel = new CommentModel;
             $commentModel->comment = Tools::getValue('comment_input');
             $commentModel->rate = Tools::getValue('rate_input');
-            //var_dump($commentModel);
             $customerId = $this->context->customer->id;
             $commentModel->id_customer = $customerId;
 
             $commentModel->save();
+
+            $this->success[] = $this->l('Comment submitted successfully.');
+            $this->redirectWithNotifications($this->getCurrentURL());
         }
 
         $this->context->controller->addCSS(_PS_MODULE_DIR_."customercomments/views/css/newcomment.css");
