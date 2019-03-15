@@ -6,30 +6,29 @@
 
 {block name='page_content'}
     <div id="rate_comment">
+
+        <p>
         <!-- 1 -->
-        <a href="#" id="rate1"><span class="no-deco-links">
+        <span class="rate-items" id="rate1">
             <i class="material-icons">&#xe838;</i>
-        </span></a>
-
+        </span>
         <!-- 2 -->
-        <a href="#"><span class="no-deco-links">
+        <span class="rate-items" id="rate2">
             <i class="material-icons">&#xe838;</i>
-        </span></a>
-
+        </span>
         <!-- 3 -->
-        <a href="#"><span class="no-deco-links">
+        <span class="rate-items" id="rate3">
             <i class="material-icons">&#xe838;</i>
-        </span></a>
-
+        </span>
         <!-- 4 -->
-        <a href="#"><span class="no-deco-links">
+        <span class="rate-items" id="rate4">
             <i class="material-icons">&#xe838;</i>
-        </span></a>
-
+        </span>
         <!-- 5 -->
-        <a href="#"><span class="no-deco-links">
+        <span class="rate-items" id="rate5">
             <i class="material-icons">&#xe838;</i>
-            </span></a>
+        </span>
+        </p>
     </div>
     <form class="form-group" method="post">
         <label for="comment_input">
