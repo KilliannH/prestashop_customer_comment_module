@@ -30,8 +30,8 @@ class customercomments extends Module {
     public $tabs = array(
             array(
                 'name' => array(
-                    'en' => 'Customer comments', // Default value should be first
-                    'fr' => 'Commentaires client',
+                    'en' => 'Comments', // Default value should be first
+                    'fr' => 'Commentaires',
         ),
         'class_name' => 'AdminPostComment',
         'parent_class_name' => 'AdminParentCustomer',

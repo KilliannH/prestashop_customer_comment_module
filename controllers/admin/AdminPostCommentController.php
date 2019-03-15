@@ -6,6 +6,8 @@
  * Time: 11:14
  */
 
+require_once _PS_MODULE_DIR_."customercomments/models/CommentModel.php";
+
 class AdminPostCommentController extends ModuleAdminController {
     /*displayBackOfficeTop*/
     public $bootstrap = true;
@@ -17,7 +19,6 @@ class AdminPostCommentController extends ModuleAdminController {
         $this->table = 'comments';
         $this->className = 'AdminPostComment';
         $this->lang = false;
-        $this->deleted = false;
         $this->allow_export = true;
         $this->list_id = 'comments';
         $this->identifier = 'id_comment';
