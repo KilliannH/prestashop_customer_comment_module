@@ -17,7 +17,7 @@ class AdminPostCommentController extends ModuleAdminController {
     public function __construct()
     {
         $this->table = 'comments';
-        $this->className = 'AdminPostComment';
+        $this->className = 'CommentModel';
         $this->lang = false;
         $this->allow_export = true;
         $this->list_id = 'comments';
