@@ -34,8 +34,8 @@ class customercomment extends Module {
                     'en' => 'Customer comment', // Default value should be first
                     'fr' => 'Commentaire client',
         ),
-        'class_name' => 'AdminCustomers',
-        'parent_class_name' => 'ShopParameters',
+        'class_name' => 'AdminPostComment',
+        'parent_class_name' => 'AdminParentCustomer',
     ));
 
     public function createTable() {
